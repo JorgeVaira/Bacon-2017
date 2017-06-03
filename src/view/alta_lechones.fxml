@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<Pane fx:id="altaLechones" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Alta_Lechones_Controller">
+   <children>
+      <Label layoutX="325.0" layoutY="43.0" prefHeight="35.0" prefWidth="278.0" text="Carga Grupo de Lechones">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      
+      <Label layoutX="99.0" layoutY="100.0" prefHeight="32.0" prefWidth="175.0" text="*Caravana Madre" />
+      <ComboBox fx:id="caravana" layoutX="99.0" layoutY="132.0" onAction="#loadFechaDestete" prefHeight="39.0" prefWidth="175.0" promptText="SELECCIONE" />
+      
+      <Label layoutX="99.0" layoutY="193.0" prefHeight="32.0" prefWidth="175.0" text="*Fecha de Destete" />
+      <ComboBox fx:id="fechaDestete" layoutX="99.0" layoutY="225.0" onAction="#loadFechaDestete" prefHeight="39.0" prefWidth="175.0" />
+      
+      <Label layoutX="99.0" layoutY="287.0" prefHeight="32.0" prefWidth="175.0" text="*Cantidad de Lechones" />
+      <TextField fx:id="cantidad" layoutX="99.0" layoutY="319.0" prefHeight="39.0" prefWidth="175.0" promptText="50">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      
+      <Label layoutX="99.0" layoutY="382.0" prefHeight="32.0" prefWidth="175.0" text="*Peso Total Inicial (en Kg)" />
+      <TextField fx:id="pesoInicial" layoutX="99.0" layoutY="414.0" prefHeight="39.0" prefWidth="175.0" promptText="200">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      
+      <Label layoutX="99.0" layoutY="475.0" prefHeight="32.0" prefWidth="175.0" text="*Tipo Alimento" />
+      <ComboBox fx:id="alimento" layoutX="99.0" layoutY="507.0" onAction="#loadComboBoxAlimento" prefHeight="39.0" prefWidth="175.0" promptText="SELECCIONE" />
+      
+      <Label layoutX="303.0" layoutY="99.0" prefHeight="35.0" prefWidth="222.0" text="Observaciones" />
+      <TextArea fx:id="observaciones" layoutX="303.0" layoutY="134.0" prefHeight="447.0" prefWidth="516.0" />
+      
+      <Button layoutX="639.0" layoutY="602.0" mnemonicParsing="false" onAction="#cargar" text="Cargar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      
+      <Button id="cancelar" fx:id="cancelar" layoutX="494.0" layoutY="602.0" mnemonicParsing="false" onAction="#cancelar" text="Volver">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      
+      <Label fx:id="resultado" layoutX="99.0" layoutY="602.0" prefHeight="17.0" prefWidth="175.0" text="(*) Campos Obligatorios"/>
+      
+   </children>
+</Pane>

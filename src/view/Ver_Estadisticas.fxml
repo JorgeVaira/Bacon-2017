@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Ver_Estadisticas_Controller">
+   <children>
+      <Label layoutX="345.0" layoutY="22.0" text="Estadísticas">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane fx:id="tp" layoutX="44.0" layoutY="78.0" prefHeight="553.0" prefWidth="770.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="Cerda" text="Lechones por año por Cerda">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="770.0">
+                     <children>
+                        <ComboBox fx:id="cerda" layoutX="32.0" layoutY="36.0" prefHeight="25.0" prefWidth="195.0" promptText="Número de Caravana" />
+                        <Button fx:id="cancelar" layoutX="348.0" layoutY="462.0" mnemonicParsing="false" onAction="#cancelar" text="Volver">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ver" layoutX="241.0" layoutY="29.0" mnemonicParsing="false" onAction="#Visualizar_Estadisticas" prefHeight="39.0" prefWidth="85.0" text="Ver">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <BarChart fx:id="barChart" layoutX="84.0" layoutY="74.0" prefHeight="380.0" prefWidth="533.0">
+                          <xAxis>
+                            <CategoryAxis fx:id="Anio" side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="Cantidad" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="Padrillo" text="Tiempo de Tunel">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox layoutX="36.0" layoutY="37.0" prefHeight="25.0" prefWidth="171.0" promptText="Número de Caravana" />
+                        <Button layoutX="298.0" layoutY="463.0" mnemonicParsing="false" text="Volver">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField layoutX="37.0" layoutY="82.0" prefHeight="25.0" prefWidth="169.0" />
+                        <Button layoutX="221.0" layoutY="37.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Ver">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="Servicio" text="Lechones Destetados Por Año">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox layoutX="23.0" layoutY="51.0" prefHeight="25.0" prefWidth="201.0" />
+                        <Button layoutX="315.0" layoutY="457.0" mnemonicParsing="false" text="Volver">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="256.0" layoutY="45.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Ver">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="22.0" layoutY="36.0" text="Caravana de Cerda Actual" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="Grupo_Lechon" text="Lechones Nacidos Vivos por Cerda">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

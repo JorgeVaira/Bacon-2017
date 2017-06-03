@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Carga_Modificacion_Controller">
+   <children>
+      <Label layoutX="345.0" layoutY="22.0" text="Modificar Datos">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="44.0" layoutY="78.0" prefHeight="553.0" prefWidth="770.0" tabClosingPolicy="SELECTED_TAB">
+        <tabs>
+          <Tab id="Cerda" text="Cerdas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="770.0">
+                     <children>
+                        <ComboBox fx:id="cerda" layoutX="32.0" layoutY="36.0" onAction="#loadComboBox_Caravanas" prefHeight="25.0" prefWidth="195.0" promptText="Número de Caravana Actual" />
+                        <ComboBox fx:id="grupo" layoutX="32.0" layoutY="125.0" onAction="#loadComboBox_Grupo" prefWidth="150.0" promptText="Número de Grupo" />
+                        <DatePicker fx:id="cerda_inicio" layoutX="30.0" layoutY="310.0" promptText="Fecha de Inicio" />
+                        <ComboBox fx:id="alimento" layoutX="32.0" layoutY="212.0" onAction="#loadComboBox_Alimento" prefWidth="150.0" promptText="Tipo de Alimento" />
+                        <TextArea fx:id="obs_cerda" layoutX="339.0" layoutY="36.0" prefColumnCount="20" prefHeight="402.0" prefRowCount="100" prefWidth="397.0" promptText="Observaciones">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="248.0" layoutY="464.0" mnemonicParsing="false" onAction="#cancelar" text="Volver">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttoncerdas" layoutX="445.0" layoutY="464.0" mnemonicParsing="false" onAction="#load_Update_Cerda" text="Modificar Datos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <DatePicker fx:id="cerda_fin" layoutX="32.0" layoutY="413.0" promptText="Fecha de Fin" />
+                        <Button layoutX="241.0" layoutY="29.0" mnemonicParsing="false" onAction="#load_campos_Cerdas" prefHeight="39.0" prefWidth="85.0" text="Ver">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                        <TextField fx:id="newCaravana" layoutX="33.0" layoutY="72.0" prefHeight="25.0" prefWidth="169.0" promptText="Nuevo número de Caravana" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="Padrillo" text="Padrillos">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="padrillo" layoutX="36.0" layoutY="37.0" prefHeight="25.0" prefWidth="171.0" promptText="Número de Caravana" />
+                        <DatePicker fx:id="padrillo_inicio" layoutX="35.0" layoutY="223.0" promptText="Fecha de Inicio" />
+                        <DatePicker fx:id="padrillo_fin" layoutX="32.0" layoutY="409.0" promptText="Fecha de Fin" />
+                        <TextArea fx:id="obs_padrillo" layoutX="298.0" layoutY="37.0" prefHeight="397.0" prefWidth="449.0" promptText="Observaciones">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="298.0" layoutY="463.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonpadrillos" layoutX="479.0" layoutY="463.0" mnemonicParsing="false" onAction="#load_Update_Padrillo" text="Modificar Datos">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="newCaravan_padrillo" layoutX="37.0" layoutY="82.0" prefHeight="25.0" prefWidth="169.0" />
+                        <Button layoutX="221.0" layoutY="37.0" mnemonicParsing="false" onAction="#load_Campos_Padrillos" prefHeight="37.0" prefWidth="67.0" text="Ver">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="Servicio" text="Servicios">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cerda5" layoutX="23.0" layoutY="51.0" prefHeight="25.0" prefWidth="201.0" promptText="Número de Caravana Cerda" />
+                         <ComboBox fx:id="padrillo5" layoutX="22.0" layoutY="194.0" prefHeight="25.0" prefWidth="201.0" />
+                        <DatePicker fx:id="servicio_date" layoutX="21.0" layoutY="386.0" promptText="Fecha de Servicio" />
+                        <TextArea fx:id="obs_servicio" layoutX="344.0" layoutY="26.0" prefHeight="385.0" prefWidth="406.0" promptText="Observaciones">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="315.0" layoutY="457.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonservicios" layoutX="495.0" layoutY="457.0" mnemonicParsing="false" onAction="#load_Update_Servicio" text="Modificar Valores">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="256.0" layoutY="45.0" mnemonicParsing="false" onAction="#load_Campos_Servicios" prefHeight="37.0" prefWidth="67.0" text="Ver">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label layoutX="23.0" layoutY="26.0" text="Caravana de Cerda Actual" />
+                        <Label layoutX="22.0" layoutY="177.0" text="Caravana de Padrillo Actual" />
+                        <ComboBox fx:id="cerda2" layoutX="23.0" layoutY="117.0" prefHeight="25.0" prefWidth="199.0" />
+                        <Label layoutX="22.0" layoutY="100.0" text="Nueva Caravana de Cerda" />
+                        <ComboBox fx:id="padrillo2" layoutX="21.0" layoutY="271.0" prefHeight="25.0" prefWidth="203.0" />
+                        <Label layoutX="22.0" layoutY="254.0" text="Nueva Caravana de Padrillo" />
+                        <Label layoutX="23.0" layoutY="369.0" text="Fecha de Servicio" />
+                        <ComboBox fx:id="fecha_serv" layoutX="23.0" layoutY="337.0" prefHeight="25.0" prefWidth="200.0" />
+                        <Label layoutX="23.0" layoutY="320.0" text="Fechas de Servicio Especificas" />
+                        <Button layoutX="222.0" layoutY="386.0" mnemonicParsing="false" onAction="#load_Observaciones_Servicios" text="Ver Observaciones" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="Parto" text="Partos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="cerda3" layoutX="25.0" layoutY="30.0" prefHeight="25.0" prefWidth="161.0" promptText="Número de Caravana" />
+                        <DatePicker fx:id="parto_date" layoutX="24.0" layoutY="152.0" prefHeight="25.0" prefWidth="160.0" promptText="Fecha de Parto" />
+                        <DatePicker fx:id="preparto_date" layoutX="25.0" layoutY="210.0" prefHeight="25.0" prefWidth="157.0" promptText="Fecha de Preparto" />
+                        <TextField fx:id="vivos" layoutX="25.0" layoutY="299.0" prefHeight="38.0" prefWidth="250.0" promptText="Cantidad de Lechones Vivos">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="muertos" layoutX="25.0" layoutY="393.0" prefHeight="38.0" prefWidth="250.0" promptText="Cantidad de Lechones Muertos">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="305.0" layoutY="460.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonpartos" layoutX="504.0" layoutY="460.0" mnemonicParsing="false" onAction="#load_Update_Parto" text="Modificar Valores">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextArea fx:id="obs_parto" layoutX="305.0" layoutY="30.0" prefHeight="409.0" prefWidth="452.0" promptText="Observaciones">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button layoutX="206.0" layoutY="30.0" mnemonicParsing="false" onAction="#load_Campos_Partos" prefHeight="37.0" prefWidth="69.0" text="Ver">
+                             <font>
+                                 <Font size="16.0" />
+                             </font>
+                        </Button>
+                        <Button layoutX="206.0" layoutY="115.0" mnemonicParsing="false" onAction="#load_Campos_Partos2" text="Ver Datos">
+                             <font>
+                               <Font size="16.0" />
+                             </font>
+                        </Button>
+                        <ComboBox fx:id="parto" layoutX="24.0" layoutY="115.0" prefWidth="150.0" />
+                         <Label layoutX="24.0" layoutY="98.0" text="Fechas de Parto Cargadas" />  
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="Grupo_Lechon" text="Grupo de Lechones">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab id="Tunel" text="Túneles">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab id="Alimento" text="Alimentos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="alimento3" layoutX="52.0" layoutY="31.0" onAction="#habilitar" prefWidth="150.0" promptText="Alimento" />
+                        <TextField fx:id="total_alim" layoutX="52.0" layoutY="209.0" promptText="Cantidad Total">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="used_alim" layoutX="52.0" layoutY="386.0" promptText="Cantidad Usada">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextArea fx:id="descrip_alimento" layoutX="328.0" layoutY="31.0" prefHeight="392.0" prefWidth="417.0" promptText="Descripción de Preparación">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextArea>
+                        <Button fx:id="cancelar" layoutX="279.0" layoutY="457.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buttonalimentos" disable="true" layoutX="476.0" layoutY="457.0" mnemonicParsing="false" onAction="#load_Update_Alimento" text="Modificar Valores">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="ver" disable="true" layoutX="224.0" layoutY="31.0" mnemonicParsing="false" onAction="#view_now" prefHeight="25.0" prefWidth="71.0" text="Ver" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="Usuario" text="Usuario">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="usuario" layoutX="42.0" layoutY="35.0" onAction="#habilitar2" prefWidth="150.0" promptText="Usuario" />
+                        <Button fx:id="ver2" disable="true" layoutX="218.0" layoutY="35.0" mnemonicParsing="false" onAction="#view_nowUsuario" text="Ver" />
+                        <TextField fx:id="apellido" layoutX="427.0" layoutY="94.0" />
+                        <TextField fx:id="nombre" layoutX="427.0" layoutY="132.0" />
+                        <TextField fx:id="contrasenia" layoutX="427.0" layoutY="172.0" />
+                        <TextField fx:id="mail" layoutX="427.0" layoutY="215.0" />
+                        <TextField fx:id="telefono" layoutX="427.0" layoutY="262.0" />
+                        <TextField fx:id="documento" layoutX="427.0" layoutY="306.0" />
+                        <TextField fx:id="cargo" layoutX="427.0" layoutY="349.0" />
+                        <Button fx:id="modificar" disable="true" layoutX="427.0" layoutY="411.0" mnemonicParsing="false" onAction="#load_Update_Usuario" prefHeight="25.0" prefWidth="148.0" text="Modificar Valores" />
+                        <Label layoutX="326.0" layoutY="98.0" prefHeight="17.0" prefWidth="80.0" text="Apellido" />
+                        <Label layoutX="326.0" layoutY="136.0" prefHeight="17.0" prefWidth="80.0" text="Nombre" />
+                        <Label layoutX="326.0" layoutY="176.0" prefHeight="17.0" prefWidth="80.0" text="Contraseña" />
+                        <Label layoutX="326.0" layoutY="219.0" prefHeight="17.0" prefWidth="80.0" text="Email" />
+                        <Label layoutX="326.0" layoutY="266.0" prefHeight="17.0" prefWidth="80.0" text="Telefono" />
+                        <Label layoutX="326.0" layoutY="310.0" prefHeight="17.0" prefWidth="80.0" text="Documento" />
+                        <Label layoutX="326.0" layoutY="353.0" prefHeight="17.0" prefWidth="80.0" text="Cargo" />
+                        <Button layoutX="326.0" layoutY="411.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="72.0" text="Cancelar" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

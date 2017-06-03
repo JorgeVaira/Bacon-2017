@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Busqueda_Filtro_Controller">
+   <children>
+      <Label layoutX="358.0" layoutY="38.0" text="Búsqueda Por Filtros">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="lechon" layoutX="358.0" layoutY="136.0" mnemonicParsing="false" onAction="#habilitar" text="Lechones">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="tunel" layoutX="513.0" layoutY="136.0" mnemonicParsing="false" onAction="#habilitar" text="Túneles">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="cerda" layoutX="83.0" layoutY="136.0" mnemonicParsing="false" onAction="#habilitar" text="Cerdas">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="padrillo" layoutX="204.0" layoutY="136.0" mnemonicParsing="false" onAction="#habilitar" text="Padrillos">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="62.0" layoutY="103.0" text="Seleccione alguno de los filtros">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="171.0" text="Seleccione alguna de las siguientes opciones (estas se habilitarán o no dependiendo de la elegida arriba)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="caravana" layoutX="83.0" layoutY="196.0" mnemonicParsing="false" onAction="#habilitar_ComboBox" text="Caravana">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="grupo" layoutX="204.0" layoutY="196.0" mnemonicParsing="false" onAction="#habilitar_ComboBox" text="Grupo">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="62.0" layoutY="221.0" text="Si no selecciona ninguna opción no se habilitará la búsqueda">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="caravan" layoutX="62.0" layoutY="270.0" prefWidth="150.0" />
+      <ComboBox fx:id="group" layoutX="248.0" layoutY="270.0" prefWidth="150.0" />
+      <Label layoutX="62.0" layoutY="246.0" text="Caravana">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="246.0" text="Grupo de Cerda">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="tun" layoutX="438.0" layoutY="270.0" prefWidth="150.0" />
+      <Label layoutX="434.0" layoutY="246.0" text="Túnel (Fecha de Inicio)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

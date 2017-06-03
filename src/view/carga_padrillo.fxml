@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Carga_Padrillo_Controller">
+   <children>
+      <Label layoutX="99.0" layoutY="77.0" prefHeight="32.0" prefWidth="175.0" text="Número Caravana" />
+      <DatePicker id="fecha_ingreso" fx:id="fecha_ingreso" layoutX="99.0" layoutY="251.0" prefHeight="40.0" prefWidth="200.0" />
+      <ComboBox fx:id="alimento" layoutX="609.0" layoutY="252.0" onAction="#loadComboBox1" prefHeight="39.0" prefWidth="200.0" promptText="Tipo" />
+      <Label layoutX="609.0" layoutY="204.0" prefHeight="32.0" prefWidth="175.0" text="Tipo Alimento" />
+      <Label layoutX="99.0" layoutY="204.0" prefHeight="32.0" prefWidth="175.0" text="Fecha Registro" />
+      <TextArea id="observaciones" fx:id="observaciones" layoutX="214.0" layoutY="365.0" prefHeight="216.0" prefWidth="516.0" />
+      <Label layoutX="212.0" layoutY="320.0" prefHeight="32.0" prefWidth="175.0" text="Observaciones" />
+      <Label layoutX="397.0" layoutY="36.0" prefHeight="35.0" prefWidth="180.0" text="Carga Padrillos">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="809.0" layoutY="641.0" mnemonicParsing="false"  onAction="#cargar" text="Cargar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="cancelar" fx:id="cancelar" layoutX="697.0" layoutY="641.0" mnemonicParsing="false" text="Volver" onAction="#cancelar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField id="caravana" fx:id="caravana" layoutX="99.0" layoutY="123.0" prefHeight="35.0" prefWidth="140.0" promptText="0001">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

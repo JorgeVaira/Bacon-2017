@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="653.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Carga_Servicio_Controller">
+   <children>
+      <Label layoutX="382.0" layoutY="55.0" text="Cargar Servicios">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fecha_servicio" layoutX="643.0" layoutY="146.0" prefHeight="25.0" prefWidth="183.0" promptText="Fecha de Servicio" />
+      <ComboBox fx:id="cerda" layoutX="90.0" layoutY="146.0" onAction="#loadComboBox1" prefHeight="25.0" prefWidth="192.0" promptText="Número de Caravana Cerda" />
+      <ComboBox fx:id="padrillo" layoutX="366.0" layoutY="146.0" onAction="#loadComboBox2" prefHeight="25.0" prefWidth="192.0" promptText="Número de Caravana Padrillo" />
+      <TextArea fx:id="observaciones" layoutX="210.0" layoutY="246.0" prefHeight="200.0" prefWidth="513.0" promptText="Escriba las Observaciones aquí" />
+      <Button fx:id="cargar" layoutX="395.0" layoutY="553.0" mnemonicParsing="false" onAction="#cargar" text="Cargar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="210.0" layoutY="198.0" text="Observaciones">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

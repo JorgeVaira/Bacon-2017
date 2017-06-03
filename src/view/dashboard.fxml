@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Dashboard_Controller">
+   <children>
+      <MenuBar pickOnBounds="false" prefHeight="37.0" prefWidth="1087.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Salir  Crl+Q" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tareas">
+               <items>
+                  <Menu mnemonicParsing="false" text="Cerdas">
+                     <items>
+                      <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Padrillos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Lechones">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Servicios">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Partos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Tunel">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Alimentos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Cargar" />
+                        <MenuItem mnemonicParsing="false" text="Modificar" />
+                        <MenuItem mnemonicParsing="false" text="Eliminar" />
+                     </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ayuda" />
+                  <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="226.0" layoutY="90.0" mnemonicParsing="false" onAction="#carga_cerda" prefHeight="55.0" prefWidth="158.0" text="Cargar Cerda/s" />
+      <Button layoutX="226.0" layoutY="193.0" mnemonicParsing="false" onAction="#carga_padrillo" prefHeight="55.0" prefWidth="158.0" text="Cargar Padrillo/s" />
+      <Button layoutX="226.0" layoutY="300.0" mnemonicParsing="false" onAction="#carga_alimento" prefHeight="55.0" prefWidth="158.0" text="Cargar Alimento/s" />
+      <Button layoutX="719.0" layoutY="300.0" mnemonicParsing="false" onAction="#ver_alimento" prefHeight="55.0" prefWidth="158.0" text="Ver Alimentos" />
+      <Button layoutX="719.0" layoutY="90.0" mnemonicParsing="false" onAction="#ver_cerda" prefHeight="55.0" prefWidth="158.0" text="Ver Cerdas" />
+      <Button layoutX="719.0" layoutY="193.0" mnemonicParsing="false" onAction="#ver_padrillo" prefHeight="55.0" prefWidth="158.0" text="Ver Padrillos" />
+      <Button layoutX="226.0" layoutY="406.0" mnemonicParsing="false" onAction="#carga_servicio" prefHeight="55.0" prefWidth="158.0" text="Cargar Servicio/s" />
+      <Button layoutX="719.0" layoutY="406.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="158.0" text="Ver Servicios" />
+      <Button layoutX="226.0" layoutY="509.0" mnemonicParsing="false" onAction="#carga_parto" prefHeight="55.0" prefWidth="158.0" text="Cargar Parto/s" />
+      <Button layoutX="719.0" layoutY="509.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="158.0" text="Ver Partos" />
+      <Button layoutX="465.0" layoutY="90.0" mnemonicParsing="false" onAction="#alta_lechones" prefHeight="55.0" prefWidth="158.0" text="Cargar Lechones" />
+      <Button layoutX="465.0" layoutY="300.0" mnemonicParsing="false" onAction="#carga_modificacion" prefHeight="55.0" prefWidth="158.0" text="Modificación" />
+      <Button layoutX="465.0" layoutY="509.0" mnemonicParsing="false" onAction="#Ver_Estadisticas" prefHeight="55.0" prefWidth="158.0" text="Ver Estadisticas" />
+   </children>
+</Pane>
